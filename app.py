@@ -33,10 +33,27 @@ def predict_light():
 def get_latest_light():
     if not latest_light:
         return jsonify({"error": "No data available"}), 404
-    return jsonify({
-        "current": latest_light,
-        "previous": previous_light if previous_light else None
-    })
+    # 攤平成單層結構
+    flat_response = {
+        "current_brightness": latest_light.get("brightness"),
+        "current_color_hue": latest_light.get("color_hue"),
+        "current_pulse_speed": latest_light.get("pulse_speed"),
+    }
+
+    if previous_light:
+        flat_response.update({
+            "previous_brightness": previous_light.get("brightness"),
+            "previous_color_hue": previous_light.get("color_hue"),
+            "previous_pulse_speed": previous_light.get("pulse_speed"),
+        })
+    else:
+        flat_response.update({
+            "previous_brightness": None,
+            "previous_color_hue": None,
+            "previous_pulse_speed": None,
+        })
+
+    return jsonify(flat_response)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
