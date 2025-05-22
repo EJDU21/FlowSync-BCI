@@ -14,6 +14,12 @@ By decoding EEG signals from athletes using a deep learning model, we estimate a
 Here’s where the magic happens: we created a visual application that turns those parameters into dynamic light displays—fans literally see what the athlete feels. It’s a brand-new way to cheer, connect, and celebrate team spirit through synchronized emotion and immersive atmosphere.
 ![Cheer Up System](./images/system-pipeline.png)
 
-## Model Framework
+## Data description
+巴拉巴拉
+
+## AI Model framework
 Our system brings together signal processing and deep learning to turn raw brainwaves into real-time ambient experiences. Here’s what’s under the hood:
 架構圖
+## Evaluation
+# Experiment Setup
+# Results
