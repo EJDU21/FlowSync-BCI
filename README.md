@@ -1,4 +1,5 @@
 # Cheer Up System based on EEG
+![Cheer Up System](./images/cheer_up_banner.png)
 
 ## Introduction
 
