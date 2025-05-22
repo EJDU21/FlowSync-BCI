@@ -21,5 +21,5 @@ Here’s where the magic happens: we created a visual application that turns tho
 Our system brings together signal processing and deep learning to turn raw brainwaves into real-time ambient experiences. Here’s what’s under the hood:
 架構圖
 ## Evaluation
-# Experiment Setup
-# Results
+### Experiment Setup
+### Results
