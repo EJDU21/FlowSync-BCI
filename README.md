@@ -41,7 +41,7 @@ This document provides step-by-step instructions for setting up the dataset, tra
 
 Download the dataset from the following link:
 
-[**Dataset Download**]([https://your-dataset-link.com](https://www.kaggle.com/datasets/sigfest/database-for-emotion-recognition-system-gameemo))
+[**Dataset Download**](https://www.kaggle.com/datasets/sigfest/database-for-emotion-recognition-system-gameemo)
 
 After downloading, upload the dataset to your Google Drive under the following path:
 /content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/
