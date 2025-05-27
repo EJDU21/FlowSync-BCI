@@ -54,7 +54,7 @@ The model training code is located in the `model` directory:
 
 To use it:
 
-1. Download `train_model.ipynb` and upload it to your Google Drive under the path:
+1. Download `train_model.ipynb` and upload it to your Google Drive under the path:\n
   `/content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/`
 2. Open the notebook in **Google Colab**.
 3. Modify all dataset and save path references in the notebook to match your Drive directory structure.
