@@ -44,7 +44,7 @@ Download the dataset from the following link:
 [**Dataset Download**](https://www.kaggle.com/datasets/sigfest/database-for-emotion-recognition-system-gameemo)
 
 After downloading, upload the dataset to your Google Drive under the following path:
-/content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/
+- `/content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/`
 
 ## 2. Model Training Notebook
 
@@ -55,6 +55,7 @@ The model training code is located in the `model` directory:
 To use it:
 
 1. Download `train_model.ipynb` and upload it to your Google Drive under the path
+- `/content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/`
 2. Open the notebook in **Google Colab**.
 3. Modify all dataset and save path references in the notebook to match your Drive directory structure.
 4. Run the notebook to train your model.
@@ -69,7 +70,7 @@ The inference notebook and pretrained model are also located in the `model` dire
 To use them:
 
 1. Download both files and place them in your Google Drive under:
-
+- `/content/drive/My Drive/Colab Notebooks/YOUR_PROJECT_NAME/`
 2. Open `1DCNN_2ch_4class_push_vad.ipynb` in **Google Colab**.
 3. Update file paths in the notebook to correctly reference the `1DCNNmodel_4class_2ch.pt` model and test data.
 4. Run the notebook to perform inference.
