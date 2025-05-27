@@ -7,9 +7,9 @@ previous_light = {}   # 上一次的燈光參數
 def normalize_vad(vad):
     v, a, d = vad
     return {
-        "brightness": (a + 1) / 2,
-        "color_hue": (v + 1) / 2 * 360,
-        "pulse_speed": (d + 1) / 2
+        "brightness": v,
+        "color_hue": d,
+        "pulse_speed": a
     }
 
 @app.route("/predict", methods=["POST"])
