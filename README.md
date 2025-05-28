@@ -105,7 +105,7 @@ To use them:
 ---
 # References
 
-This project was developed as part of the Spring 2025 `Brain Computer Interfaces: Fundamentals and Application` course at National Tsing Hua University.
+This project was developed as part of the **Spring 2025 `Brain Computer Interfaces: Fundamentals and Application`** course at National Tsing Hua University.
 
 Special thanks to `yang25768` and `Jenna-Chou` for their valuable contributions to model development, experimentation, and result interpretation throughout the project.
 
