@@ -102,3 +102,16 @@ To use them:
 3. Update file paths in the notebook to correctly reference the `1DCNNmodel_4class_2ch.pt` model and test data.
 4. Run the notebook to perform inference.
 
+---
+# References
+
+This project was developed as part of the Spring 2025 *Brain Computer Interfaces: Fundamentals and Application* course at National Tsing Hua University.
+
+Special thanks to **yang25768** and **Jenna-Chou** for their valuable contributions to model development, experimentation, and result interpretation throughout the project.
+
+## External References
+
+- [EEG-Transformer GitHub Repository](https://github.com/YundongWang/BCI_Challenge)
+- [Motor Imagery BCI Examples](https://github.com/mikaelhaji/MotorImagery)
+- [SSVEP Multi-task Learning Baseline](https://github.com/jinglescode/ssvep-multi-task-learning)
+
