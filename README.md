@@ -58,12 +58,11 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
 - **1D CNN** models demonstrated robust performance across all settings and were the only architecture to succeed with reduced channel input (2ch), making them ideal for low-resource applications.
 - Models relying heavily on attention mechanisms (like Transformers) failed to converge with fewer channels, suggesting a need for either architectural tuning or richer input features.
 
-
+---
 # **Installation & Setup Guide**
 
 This document provides step-by-step instructions for setting up the dataset, training, and inference environment for this project.
 
----
 
 ## 1. Dataset Download
 
