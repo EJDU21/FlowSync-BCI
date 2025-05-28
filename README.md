@@ -42,9 +42,6 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
   - 1D CNN
   - Standard Transformer
   - 1D CNN-LSTM
-
-We assessed not only classification accuracy but also model stability under different EEG configurations, focusing on whether the model could converge during training.
-
 ---
 
 ### Results
