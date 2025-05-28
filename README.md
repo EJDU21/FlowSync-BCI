@@ -1,21 +1,21 @@
 # **FlowSync：Taiwanese style cheer up system based on BCI**
----
+
 ![Cheer Up System](./images/introduction.png)
 
-## Introduction
+## **Introduction**
 
 Cheer Up System based on EEG is a real-time brain-computer interface (BCI) project designed to spark new energy in Taiwan’s sports culture. Our mission is to build a bridge between athletes and fans—emotionally and visually.
 
 
-## Vedio Demo
+## **Vedio Demo**
 影片
 
-## System Pipline
+## **System Pipline**
 By decoding EEG signals from athletes using a deep learning model, we estimate athlete's mental state in terms of Valence, Arousal, and Dominance (VAD). These emotional signals are sent live to a custom-built cloud server, where they’re transformed into lighting parameters.
 Here’s where the magic happens: we created a visual application that turns those parameters into dynamic light displays—fans literally see what the athlete feels. It’s a brand-new way to cheer, connect, and celebrate team spirit through synchronized emotion and immersive atmosphere.
 ![Cheer Up System](./images/system-pipeline.png)
 
-## Data description
+## **Data description**
 ### Gameemo
 This study uses an EEG dataset collected from 28 participants. Each participant played four computer games designed to evoke different emotional states: boring, calm, horror, and funny. Each game lasted 5 minutes, resulting in a total of 20 minutes of EEG recordings for each subject.Subjects rated on participants emotional responses using the Self-Assessment Manikin (SAM) scale, which measures two dimensions: valence (pleasantness) and arousal (intensity).The dataset detail can be found via the following DOI: https://doi.org/10.1016/j.bspc.2020.101951
 
@@ -25,10 +25,10 @@ this study applied ICA along with the ICLabel tool to automatically classify the
 
 The results show that ASR effectively improves signal quality and enhances the reliability of subsequent emotion recognition analysis.
 
-## AI Model framework
+## **AI Model framework**
 Our system brings together signal processing and deep learning to turn raw brainwaves into real-time ambient experiences. Here’s what’s under the hood:
 架構圖
-## Evaluation
+## **Evaluation**
 
 ### Experiment Setup
 
@@ -42,7 +42,6 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
   - 1D CNN
   - Standard Transformer
   - 1D CNN-LSTM
----
 
 ### Results
 
@@ -54,13 +53,13 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
 | **Transformer**              | 77.84%        | 88.27%        | ✘ not converge   | ✘ not converge   |
 | **1D CNN-LSTM**              | 75.65%        | 82.50%        | 70.65%           | 80.51%           |
 
-**Key take-aways**:
+### Key take-aways:
 - The **Simple EEG-Transformer** consistently achieved the highest accuracy in both 14-channel tasks, peaking at **88.28%** for 2-class classification.
 - **1D CNN** models demonstrated robust performance across all settings and were the only architecture to succeed with reduced channel input (2ch), making them ideal for low-resource applications.
 - Models relying heavily on attention mechanisms (like Transformers) failed to converge with fewer channels, suggesting a need for either architectural tuning or richer input features.
 
 
-# Installation & Setup Guide
+# **Installation & Setup Guide**
 
 This document provides step-by-step instructions for setting up the dataset, training, and inference environment for this project.
 
