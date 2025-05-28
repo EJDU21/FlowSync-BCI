@@ -1,5 +1,5 @@
 # **FlowSync：Taiwanese style cheer up system based on BCI**
-
+---
 ![Cheer Up System](./images/introduction.png)
 
 ## Introduction
