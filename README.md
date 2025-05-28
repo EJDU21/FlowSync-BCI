@@ -47,26 +47,21 @@ We assessed not only classification accuracy but also model stability under diff
 
 ---
 
-### 📈 Results
+### Results
 
 | Model                         | 14ch, 4-class | 14ch, 2-class | 2ch, 4-class     | 2ch, 2-class     |
 |------------------------------|---------------|---------------|------------------|------------------|
 | **GitHub EEG-Transformer**   | 73.85%        | 85.34%        | ✘ not converge   | ✘ not converge   |
-| **Simple EEG-Transformer**   | 80.61%        | **88.28%**    | ✘ not converge   | ✘ not converge   |
-| **1D CNN**                   | 78.93%        | 86.99%        | 70.97%           | **84.97%**       |
+| **Simple EEG-Transformer**   | **80.61%**    | **88.28%**    | ✘ not converge   | ✘ not converge   |
+| **1D CNN**                   | 78.93%        | 86.99%        | **70.97%**       | **84.97%**       |
 | **Transformer**              | 77.84%        | 88.27%        | ✘ not converge   | ✘ not converge   |
 | **1D CNN-LSTM**              | 75.65%        | 82.50%        | 70.65%           | 80.51%           |
 
-✅ **Key takeaways**:
+**Key take-aways**:
 - The **Simple EEG-Transformer** consistently achieved the highest accuracy in both 14-channel tasks, peaking at **88.28%** for 2-class classification.
 - **1D CNN** models demonstrated robust performance across all settings and were the only architecture to succeed with reduced channel input (2ch), making them ideal for low-resource applications.
 - Models relying heavily on attention mechanisms (like Transformers) failed to converge with fewer channels, suggesting a need for either architectural tuning or richer input features.
-- The system’s flexibility across configurations supports its future scalability—ranging from high-resolution competitive scenarios to lightweight wearable setups.
 
-🎯 These results confirm the potential of transformer-based EEG models in emotion-driven applications like our Cheer Up System, especially when paired with high-resolution EEG input.
-
-
-### Results
 
 # Installation & Setup Guide
 
