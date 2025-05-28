@@ -52,6 +52,7 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
 | **1D CNN**                   | 78.93%        | 86.99%        | **70.97%**       | **84.97%**       |
 | **Transformer**              | 77.84%        | 88.27%        | ✘ not converge   | ✘ not converge   |
 | **1D CNN-LSTM**              | 75.65%        | 82.50%        | 70.65%           | 80.51%           |
+
 ![Cheer Up System](./images/1D-CNN.png)
 ### Key take-aways:
 - The **Simple EEG-Transformer** consistently achieved the highest accuracy in both 14-channel tasks, peaking at **88.28%** for 2-class classification.
