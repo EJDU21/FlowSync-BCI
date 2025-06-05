@@ -64,9 +64,7 @@ following is the comparison of training & testing result by 3 different methods 
 | **GitHub EEG-Transformer**   | 89.52%        | 84.50%        | 73.85%   |
 | **1D CNN**   | 83.43%   | 84.86%    | 78.93%   |
 
-base on this result, it is apparent that the testing accuracy result in "**split by person**" is significantly lower than the others because it prevents any chance to cheat in testing.
-
-in our application scenario, our training data definitely won't come from the audience, so we need to make sure that any data in the testing dataset and training dataset do not come from the same person. we decide to choose "**split by person**" to generate our training and testing dataset.
+Base on this result, it is apparent that the testing accuracy result in "**split by person**" is significantly lower than the others because it prevents any chance to cheat in testing.In our application scenario, our training data definitely won't come from the audience, so we need to make sure that any data in the testing dataset and training dataset do not come from the same person. we decide to choose "**split by person**" to generate our training and testing dataset.
 
 **training parameter:**
 learning rate:1e-3
