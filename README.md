@@ -37,12 +37,51 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
 - **Channel setups**: 14 channels and 2 channels  
 - **Classification tasks**: 4-class and 2-class models  
 - **Models tested**:
-  - GitHub EEG-Transformer (original)
-  - Simplified GitHub EEG-Transformer
-  - 1D CNN
-  - Standard Transformer
-  - 1D CNN-LSTM
+  - **GitHub EEG-Transformer (original):**
+  channel attention --> patch-embedding --> transformer encoder --> classifier
+  - **Simplified GitHub EEG-Transformer:**
+  simple-patch-embedding --> transformer encoder --> classifier
+  - **Standard Transformer:**
+  postion-embedding --> transformer encoder --> classifier
+  - **1D CNN:**
+  1D CNN --> classifier
+  - **1D CNN-LSTM:**
+  1D CNN --> LSTM --> classifier
+  
+**data preparing:**
+first we use the whole data and slice all the data to 2s long (with 1s overlap) with labels to create the training and testing dataset, totally 33264 data. we then split the data into train:test = 7:3, because it can happen that one data in the training dataset overlaps a data in the testing dataset, so to prevent this we slice the data without overlapping each other.
 
+after that, we want to find if we use someone’s data in training and use another data but from the same person as testing data, will it influence the testing result? so we split the data by person with 19 persons’ data in training and another 9 persons in testing (roughly 7:3).
+
+following is the comparison of training & testing result by 3 different methods of generating data
+
+**1s overlap**: slice all preprocessed data into 2s segments with 1s overlapping, creating a total of 33264 data --> split it randomly to train:test = 7:3
+
+**non-overlap**: slice all preprocessed data into 2s segments without overlapping, creating a total of 16688 data --> split it randomly to train:test = 7:3
+
+**split by person**: randomly choose 19 persons to be in the training dataset, and the other 9 persons to be in the testing dataset (roughly 7:3) --> for each dataset, slice the data into 2s segments with 1s overlapping, creating 22572 data in training and 10692 data in testing.
+
+**Result**:
+| Testing accuracy(14channel,4classes)     | 1s overlap | non-overlap | split by person  |
+|------------------------------|---------------|---------------|------------------|
+| **GitHub EEG-Transformer**   | 89.52%        | 84.50%        | 73.85%   |
+| **1D CNN**   | 83.43%   | 84.86%    | 78.93%   |
+
+base on this result, it is apparent that the testing accuracy result in "**split by person**" is significantly lower than the others because it prevents any chance to cheat in testing.
+
+in our application scenario, our training data definitely won't come from the audience, so we need to make sure that any data in the testing dataset and training dataset do not come from the same person. we decide to choose "**split by person**" to generate our training and testing dataset.
+
+**training parameter:**
+learning rate:1e-3
+optimizer:ADAM
+Loss function: CrossEntropyLoss
+data sample rate: 128/s
+**training epochs:**
+GitHub EEG-Transformer: 200
+Simple EEG-Transformer: 200
+1D CNN: 60
+Transformer: 120
+1D CNN-LSTM: 100
 ### Results
 
 | Model                         | 14ch, 4-class | 14ch, 2-class | 2ch, 4-class     | 2ch, 2-class     |
