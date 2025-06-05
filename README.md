@@ -45,7 +45,7 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
   - **1D CNN-LSTM:**
   1D CNN --> LSTM --> classifier
   
-**data mining:**
+### data mining:
 first we use the whole data and slice all the data to 2s long (with 1s overlap) with labels to create the training and testing dataset, totally 33264 data. we then split the data into train:test = 7:3, because it can happen that one data in the training dataset overlaps a data in the testing dataset, so to prevent this we slice the data without overlapping each other.
 
 after that, we want to find if we use someone’s data in training and use another data but from the same person as testing data, will it influence the testing result? so we split the data by person with 19 persons’ data in training and another 9 persons in testing (roughly 7:3).
@@ -58,7 +58,7 @@ following is the comparison of training & testing result by 3 different methods 
 
 **split by person**: randomly choose 19 persons to be in the training dataset, and the other 9 persons to be in the testing dataset (roughly 7:3) --> for each dataset, slice the data into 2s segments with 1s overlapping, creating 22572 data in training and 10692 data in testing.
 
-**Result**:
+### Result:
 | Testing accuracy(14channel,4classes)     | 1s overlap | non-overlap | split by person  |
 |------------------------------|---------------|---------------|------------------|
 | **GitHub EEG-Transformer**   | 89.52%        | 84.50%        | 73.85%   |
@@ -79,7 +79,6 @@ Simple EEG-Transformer: 200
 1D CNN: 60
 Transformer: 120
 1D CNN-LSTM: 100
-### Results
 
 | Model                         | 14ch, 4-class | 14ch, 2-class | 2ch, 4-class     | 2ch, 2-class     |
 |------------------------------|---------------|---------------|------------------|------------------|
