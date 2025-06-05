@@ -3,6 +3,7 @@
 ## **Introduction & Vedio Demo**
 
 Cheer Up System based on EEG is a real-time brain-computer interface (BCI) project designed to spark new energy in Taiwan’s sports culture. Our mission is to build a bridge between athletes and fans—emotionally and visually.
+Check out our demo video by clicking the image below!
 
 [![FlowSync Demo](./images/introduction.png)](https://youtu.be/w_erGb1i1XM)
 
