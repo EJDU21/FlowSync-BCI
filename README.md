@@ -8,8 +8,11 @@ Cheer Up System based on EEG is a real-time brain-computer interface (BCI) proje
 
 
 ## **Vedio Demo**
-[![FlowSync Demo](![youtube縮圖](https://github.com/user-attachments/assets/9a5acb90-1704-474f-b225-7f3970058948)
-)](https://youtu.be/w_erGb1i1XM)
+
+[![FlowSync Demo](https://img.youtube.com/vi/w_erGb1i1XM/0.jpg)](https://youtu.be/w_erGb1i1XM)
+
+📺 點上圖觀看影片，展示 FlowSync 系統如何即時轉換腦波情緒為燈光互動，提升觀眾參與感與沉浸體驗。
+
 
 ## **System Pipline**
 By decoding EEG signals from athletes using a deep learning model, we estimate athlete's mental state in terms of Valence, Arousal. These emotional signals are sent live to a custom-built cloud server, where they’re transformed into lighting parameters.
