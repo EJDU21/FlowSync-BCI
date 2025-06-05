@@ -45,7 +45,7 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
   - **1D CNN-LSTM:**
   1D CNN --> LSTM --> classifier
   
-### data mining:
+### Data mining:
 first we use the whole data and slice all the data to 2s long (with 1s overlap) with labels to create the training and testing dataset, totally 33264 data. we then split the data into train:test = 7:3, because it can happen that one data in the training dataset overlaps a data in the testing dataset, so to prevent this we slice the data without overlapping each other.
 
 after that, we want to find if we use someone’s data in training and use another data but from the same person as testing data, will it influence the testing result? so we split the data by person with 19 persons’ data in training and another 9 persons in testing (roughly 7:3).
@@ -67,16 +67,16 @@ following is the comparison of training & testing result by 3 different methods 
 Base on this result, it is apparent that the testing accuracy result in "**split by person**" is significantly lower than the others because it prevents any chance to cheat in testing.In our application scenario, our training data definitely won't come from the audience, so we need to make sure that any data in the testing dataset and training dataset do not come from the same person. we decide to choose "**split by person**" to generate our training and testing dataset.
 
 **training parameter:**
-learning rate:1e-3
-optimizer:ADAM
-Loss function: CrossEntropyLoss
-data sample rate: 128/s
+- learning rate:1e-3
+- optimizer:ADAM
+- Loss function: CrossEntropyLoss
+- data sample rate: 128/s
 **training epochs:**
-GitHub EEG-Transformer: 200
-Simple EEG-Transformer: 200
-1D CNN: 60
-Transformer: 120
-1D CNN-LSTM: 100
+- GitHub EEG-Transformer: 200
+- Simple EEG-Transformer: 200
+- 1D CNN: 60
+- Transformer: 120
+- 1D CNN-LSTM: 100
 
 | Model                         | 14ch, 4-class | 14ch, 2-class | 2ch, 4-class     | 2ch, 2-class     |
 |------------------------------|---------------|---------------|------------------|------------------|
