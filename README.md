@@ -46,11 +46,7 @@ To evaluate the performance of our EEG-based Cheer Up System, we tested five dif
   1D CNN --> LSTM --> classifier
   
 ### Data mining:
-first we use the whole data and slice all the data to 2s long (with 1s overlap) with labels to create the training and testing dataset, totally 33264 data. we then split the data into train:test = 7:3, because it can happen that one data in the training dataset overlaps a data in the testing dataset, so to prevent this we slice the data without overlapping each other.
-
-after that, we want to find if we use someone’s data in training and use another data but from the same person as testing data, will it influence the testing result? so we split the data by person with 19 persons’ data in training and another 9 persons in testing (roughly 7:3).
-
-following is the comparison of training & testing result by 3 different methods of generating data
+First we use the whole data and slice all the data to 2s long (with 1s overlap) with labels to create the training and testing dataset, totally 33264 data. we then split the data into train:test = 7:3, because it can happen that one data in the training dataset overlaps a data in the testing dataset, so to prevent this we slice the data without overlapping each other.After that, we want to find if we use someone’s data in training and use another data but from the same person as testing data, will it influence the testing result? so we split the data by person with 19 persons’ data in training and another 9 persons in testing (roughly 7:3).Following is the comparison of training & testing result by 3 different methods of generating data
 
 **1s overlap**: slice all preprocessed data into 2s segments with 1s overlapping, creating a total of 33264 data --> split it randomly to train:test = 7:3
 
